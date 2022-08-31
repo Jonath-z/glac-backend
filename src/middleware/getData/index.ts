@@ -1,11 +1,11 @@
 import { NextFunction, Request, Response } from "express";
 
 const getData = async (req: Request, res: Response, next: NextFunction) => {
-  console.log("comming request", req);
+  console.log("comming request", req.body);
 
   res.send().json({
     message: "request received",
-    request: req,
+    body: req.body,
   });
 
   next();
